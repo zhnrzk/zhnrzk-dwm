@@ -1,0 +1,8 @@
+# Compiled object files
+*.o
+
+# Compiled binaries
+dwm/dwm
+slock/slock
+slstatus/slstatus
+st/st
