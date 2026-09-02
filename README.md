@@ -5,7 +5,7 @@ My personal suckless tool configurations: dwm, slock, slstatus, st.
 ## Dependencies
 
 ```bash
-sudo pacman -S git base-devel xorg-xinit xorg-xrandr xorg-xsetroot alacritty rofi libx11 libxinerama libxext libxrandr fontconfig freetype2 fzf zoxide eza starship
+sudo pacman -S git base-devel xorg-xinit xorg-xrandr xorg-xsetroot alacritty rofi feh libx11 libxinerama libxext libxrandr fontconfig freetype2 fzf zoxide eza starship
 ```
 
 ## Installation
@@ -28,6 +28,7 @@ Copy the config files to your home directory:
 ```bash
 cp ~/.suckless/.xinitrc ~/.xinitrc
 cp ~/.suckless/.bashrc ~/.bashrc
+cp -r ~/.suckless/wallz ~/Pictures/wallz
 ```
 
 ## Usage
