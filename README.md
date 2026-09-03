@@ -5,7 +5,7 @@ My personal suckless tool configurations: dwm, slock, slstatus, st.
 ## Dependencies
 
 ```bash
-sudo pacman -S git base-devel xorg-xinit xorg-xrandr xorg-xsetroot alacritty rofi feh libx11 libxinerama libxext libxrandr fontconfig freetype2 fzf zoxide eza starship ttf-caskaydia-mono-nerd
+sudo pacman -S git base-devel xorg-xinit xorg-xrandr xorg-xsetroot alacritty rofi feh libx11 libxinerama libxext libxrandr fontconfig freetype2 fzf zoxide eza starship ttf-caskaydia-mono-nerd slop gpu-screenrecorder flameshot
 ```
 
 ## Installation
