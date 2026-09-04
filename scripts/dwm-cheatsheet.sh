@@ -1,5 +1,5 @@
 #!/bin/sh
-python3 ~/.suckless/scripts/dwm-cheatsheet.py --list | \
+python3 ~/zhnrzk-dwm/scripts/dwm-cheatsheet.py --list | \
 	fzf --prompt="dwm keybind> " \
 	    --layout=reverse \
 	    --border \

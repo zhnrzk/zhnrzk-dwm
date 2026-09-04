@@ -69,10 +69,9 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *rofi[] = {"rofi","-show","drun","-theme","~/.config/rofi/config.rasi", NULL };
 static const char *screenshotcmd[] = { "flameshot","gui", NULL };
-static const char *screenrecorderCmd[] = { "/home/zhnrzk/.local/bin/screenrecord.sh", NULL };
+static const char *screenrecorderCmd[] = { "/home/zhnrzk/zhnrzk-dwm/scripts/screenrecord.sh", NULL };
 static const char *slock[]    = { "slock", NULL };
 /* static const char *lockcmd[] = { "/bin/sh", "-c", "[ ! -f ~/.config/slock-disabled ] && slock", NULL }; */
-static const char *togglenotifyCmd[] = { "/home/zhnrzk/.local/bin/dunst-toggle.sh", NULL };
 static const char *firefoxcmd[]  = { "firefox", NULL };
 static const char *filemanager[] = { "thunar", NULL };
 static const char *clipmenucmd[] = { "clipmenu", NULL };
@@ -86,7 +85,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_space,  spawn,          {.v = rofi } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
         { MODKEY|ControlMask,           XK_l,      spawn,          {.v = slock} },
-        { MODKEY,	                XK_n,      spawn,          {.v = togglenotifyCmd } },
+        { MODKEY,	                XK_n,      spawn,	   SHCMD("~/zhnrzk-dwm/scripts/dunst-toggle.sh") },
 	{ MODKEY,                       XK_s,      spawn,          {.v = screenshotcmd } },
 	{ MODKEY|ShiftMask,		XK_s,      spawn,	   {.v = screenrecorderCmd } },
         { MODKEY,                       XK_b,      spawn,          {.v = firefoxcmd } },
@@ -94,8 +93,8 @@ static const Key keys[] = {
 	{ MODKEY, 			XK_e,      spawn,          {.v = filemanager } },
 	{ MODKEY|ShiftMask,		XK_a,      spawn,	   {.v = gemini } },
 	{ MODKEY|ShiftMask,		XK_l,	   spawn,	   SHCMD("~/.local/bin/toggle-lock.sh") },
-	{ MODKEY|ShiftMask,             XK_slash,  spawn,	   SHCMD("alacritty --class floating_window -e ~/.suckless/scripts/dwm-cheatsheet.sh") },
-	{ MODKEY|ShiftMask, 		XK_w,	   spawn,	   SHCMD("feh --randomize --bg-fill /home/zhnrzk/Pictures/wallz/*") },
+	{ MODKEY|ShiftMask,             XK_slash,  spawn,	   SHCMD("alacritty --class floating_window -e ~/zhnrzk-dwm/scripts/dwm-cheatsheet.sh") },
+	{ MODKEY|ShiftMask, 		XK_w,	   spawn,	   SHCMD("feh --randomize --bg-fill ~/zhnrzk-dwm/wallz/*") },
 	{ MODKEY|ControlMask,           XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
