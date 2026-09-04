@@ -84,6 +84,6 @@ static const struct arg args[] = {
 	{ run_command, "| 🔊 %s ", vol },
 	{ run_command, "| %s ", "/home/zhnrzk/.suckless/slstatus/scripts/weather.sh" },
 	{ datetime,      "|  %s ",     "%a %b,%d %I:%M %p"}, /* Date time with this format: DD-MM-YYYY 18:00:00 */
-/*	{ run_command, " [ %s ",       "[ -f ~/.config/slock-disabled ] && echo 'Caff' || echo 'NoCaff'" }, */
+	{ run_command, " [ %s ",       "[ -f ~/.config/slock-disabled ] && echo 'Caff' || echo 'NoCaff'" },
 	{ run_command,  " %s ]",  "if [ \"$(dunstctl is-paused)\" = \"true\" ]; then echo 'DND 󰂛'; else echo ''; fi" },
 };
