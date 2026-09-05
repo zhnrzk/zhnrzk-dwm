@@ -82,7 +82,7 @@ static const struct arg args[] = {
 /*	{ netspeed_tx,      "▲ %sB/s ",     "wlan0" }, */
 	{ run_command, " %s ", "/home/zhnrzk/.local/bin/now_playing.sh" },
 	{ run_command, "| 🔊 %s ", vol },
-	{ run_command, "| %s ", "/home/zhnrzk/.suckless/slstatus/scripts/weather.sh" },
+	{ run_command, "| %s ", "/home/zhnrzk/zhnrzk-dwm/slstatus/scripts/weather.sh" },
 	{ datetime,      "|  %s ",     "%a %b,%d %I:%M %p"}, /* Date time with this format: DD-MM-YYYY 18:00:00 */
 	{ run_command, " [ %s ",       "[ -f ~/.config/slock-disabled ] && echo 'Caff' || echo 'NoCaff'" },
 	{ run_command,  " %s ]",  "if [ \"$(dunstctl is-paused)\" = \"true\" ]; then echo 'DND 󰂛'; else echo ''; fi" },
