@@ -15,5 +15,10 @@ if [ "$action" = "default" ]; then
     mkdir -p "$HOME/Pictures/Screenshots"
     dest="$HOME/Pictures/Screenshots/screenshot-$(date +%Y%m%d-%H%M%S).png"
     mv "$tmp" "$dest"
-    notify-send -a Screenshot "Saved" "$dest"
+    ACTION="$(notify-send -t 10000 -a "Screenshot" \
+        -A "default=Open Folder" \
+        "Saved" "$dest")"
+    if [ "$ACTION" = "default" ]; then
+        xdg-open "$(dirname "$dest")"
+    fi
 fi

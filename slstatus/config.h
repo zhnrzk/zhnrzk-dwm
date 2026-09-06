@@ -80,7 +80,7 @@ static const struct arg args[] = {
     /* function   format          argument */
 /*        { netspeed_rx,      "▼ %sB/s ",     "wlan0" }, */
 /*	{ netspeed_tx,      "▲ %sB/s ",     "wlan0" }, */
-	{ run_command, " %s ", "/home/zhnrzk/.local/bin/now_playing.sh" },
+/*	{ run_command, " %s ", "/home/zhnrzk/.local/bin/now_playing.sh" }, */
 	{ run_command, "| 🔊 %s ", vol },
 	{ run_command, "| %s ", "/home/zhnrzk/zhnrzk-dwm/slstatus/scripts/weather.sh" },
 	{ datetime,      "|  %s ",     "%a %b,%d %I:%M %p"}, /* Date time with this format: DD-MM-YYYY 18:00:00 */

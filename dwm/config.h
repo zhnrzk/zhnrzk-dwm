@@ -11,7 +11,7 @@ static const int showsystray        = 1;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "CaskaydiaMono Nerd Font:size=10" };
-static const char dmenufont[]       = "CaskaydiaMono Nerd Font:size=10";
+static const char dmenufont[]       = "CaskaydiaMono Nerd Font:size=9";
 static const char col_gray1[]       = "#1a1b26"; /* Deep neon-blue night background */
 static const char col_gray2[]  = "#24283b"; /* Inactive border (Subtle dark purple-gray) */
 static const char col_gray3[]       = "#a9b1d6"; /* Muted silver-blue text */
@@ -24,7 +24,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "" };
+static const char *tags[] = { "1", "2", "3", "4", "5" };
 
 static const Rule rules[] = {
 	/* xprop(1):
