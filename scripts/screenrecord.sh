@@ -16,13 +16,14 @@ if pgrep -f "[g]pu-screen-recorder" > /dev/null; then
     if [ -f /tmp/recording_saved ]; then
         SAVED_FILE=$(cat /tmp/recording_saved)
         rm -f /tmp/recording_saved
-        notify-send -t 10000 -a "Screenrecorder" \
+        ACTION=$(notify-send -t 10000 -a "Screenrecorder" \
             -A "open_video=Open Video" \
             -A "open_folder=Open Folder" \
-            "Recording Stopped" "Video saved:\n$SAVED_FILE"
-        case $? in
-            1) xdg-open "$SAVED_FILE" ;;
-            2) xdg-open "$(dirname "$SAVED_FILE")" ;;
+            "Recording Stopped" "Video saved:\n$SAVED_FILE")
+
+        case "$ACTION" in
+            open_video)  xdg-open "$SAVED_FILE" ;;
+            open_folder) xdg-open "$(dirname "$SAVED_FILE")" ;;
         esac
     else
         notify-send -t 3000 -a "Screenrecorder" "Recording Stopped" "Video saved to ~/Videos"
