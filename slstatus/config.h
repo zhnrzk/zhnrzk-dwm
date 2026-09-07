@@ -67,13 +67,13 @@ static const char unknown_str[] = "n/a";
 static const char vol[] = "vol=$(wpctl get-volume @DEFAULT_SINK@); \
                             if echo \"$vol\" | grep -q '\\[MUTED\\]'; then \
                                 printf \"MUTED\"; \
-                            else echo \"$vol\" | awk '{print $2}'; \
-                            fi";
+                            else echo \"$vol\" | awk '{printf \"%.0f\", $2 * 100}'; \
+			    fi";
 
 static const char mic[] = "vol=$(wpctl get-volume @DEFAULT_SOURCE@); \
                             if echo \"$vol\" | grep -q '\\[MUTED\\]'; then \
                                 printf \"MUTED\"; \
-                            else echo \"$vol\" | awk '{print $2}'; \
+                            else echo \"$vol\" | awk '{printf \"%.0f\", $2 * 100}'; \
                             fi";
 
 static const struct arg args[] = {
@@ -81,9 +81,9 @@ static const struct arg args[] = {
 /*        { netspeed_rx,      "▼ %sB/s ",     "wlan0" }, */
 /*	{ netspeed_tx,      "▲ %sB/s ",     "wlan0" }, */
 /*	{ run_command, " %s ", "/home/zhnrzk/.local/bin/now_playing.sh" }, */
-	{ run_command, "| 🔊 %s ", vol },
-	{ run_command, "| %s ", "/home/zhnrzk/zhnrzk-dwm/slstatus/scripts/weather.sh" },
-	{ datetime,      "|  %s ",     "%a %b,%d %I:%M %p"}, /* Date time with this format: DD-MM-YYYY 18:00:00 */
+	{ run_command, " %s%% ", vol },
+	{ run_command, " %s ", "/home/zhnrzk/zhnrzk-dwm/slstatus/scripts/weather.sh" },
+	{ datetime,      " %s ",     "%a %b,%d %I:%M %p"}, /* Date time with this format: DD-MM-YYYY 18:00:00 */
 	{ run_command, " [ %s ",       "[ -f ~/.config/slock-disabled ] && echo 'Caff' || echo 'NoCaff'" },
 	{ run_command,  " %s ]",  "if [ \"$(dunstctl is-paused)\" = \"true\" ]; then echo 'DND 󰂛'; else echo ''; fi" },
 };
